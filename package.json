@@ -1,0 +1,20 @@
+{
+  "name": "push",
+  "version": "0.1.0",
+  "description": "Web Push server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zemke/push.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zemke/push/issues"
+  },
+  "homepage": "https://github.com/zemke/push#readme",
+  "dependencies": {
+    "web-push": "^3.6.6"
+  }
+}
