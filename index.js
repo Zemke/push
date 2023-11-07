@@ -49,11 +49,15 @@ http.createServer(async (req, res) => {
   } else if (req.url === "/sub") {
     // TODO store subscription
     res.statusCode = 201;
+  } else if (req.url === "/unsub") {
+    // TODO remove subscription
+    res.statusCode = 200;
   } else if (req.url === "/pub") {
     const payload = await read(req);
     console.info('pub', payload);
+    // TODO sub from filestore
     webPush
-      .sendNotification(payload.sub, payload.payload)
+      .sendNotification(sub, payload.payload)
       .then(() => {
         console.info('success');
         res.statusCode = 201;
